@@ -33,12 +33,6 @@ steps:
     pip install unittest-xml-reporting
   displayName: 'Install prerequisites'
 
-- task: Bash@3
-  displayName: env
-  inputs:
-    script: |
-      env
-
 - script: |
     pushd '$(projectRoot)'
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
