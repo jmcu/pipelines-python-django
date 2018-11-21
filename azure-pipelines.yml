@@ -34,8 +34,10 @@ steps:
   displayName: 'Install prerequisites'
 
 - task: Bash@3
-    inputs:
-      script: 'ls -lat'
+  displayName: ls
+  inputs:
+    script: |
+      ls -lat
 
 - script: |
     pushd '$(projectRoot)'
