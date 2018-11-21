@@ -34,10 +34,10 @@ steps:
   displayName: 'Install prerequisites'
 
 - task: Bash@3
-  displayName: whoami
+  displayName: env
   inputs:
     script: |
-      whoami
+      env
 
 - script: |
     pushd '$(projectRoot)'
